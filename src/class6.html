@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --white: #ffffff;
+        --black: #000000;
+        --very-light-pink: #d8bfd8;
+        --text-input-field: #f7f7f7;
+        --plum: LightPink;
+        --turqueise: #76d7c4;
+        --sm: 14px;
+        --md: 16px;
+        --lg: 18px;
+      }
+      body {
+        margin: 0;
+        font-family: 'Quicksand', sans-serif;
+        background-color: rgba(221, 160, 221, 0.1);
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 28px;
+        border-bottom: 1px solid var(--very-light-pink);
+      }
+      .menu {
+        display: none;
+        width: 20px;
+        height: 20px;
+      }
+      .nav-logo {
+        width: 100px;
+      }
+      .navbar-left ul,
+      .navbar-right ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        height: 50px;
+      }
+      .navbar-left {
+        display: flex;
+      }
+      .navbar-left ul {
+        margin-left: 18px;
+      }
+      .navbar-left ul li a,
+      .navbar-right ul li a {
+        text-decoration: none;
+        color: var(--very-light-pink);
+        margin: 0 6px;
+        padding: 8px;
+      }
+      .navbar-left ul li a:hover,
+      .navbar-right ul li a:hover {
+        color: var(--turqueise);
+      }
+      .navbar-email {
+        color: var(--very-light-pink);
+        font-size: var(--sm);
+        margin-right: 12px;
+      }
+      .navbar-shopping-card {
+        position: relative;
+      }
+      .shopping-card {
+        width: 20px;
+      }
+      .flechita {
+        width: 14px;
+        transform: rotate(90deg);
+      }
+      .navbar-shopping-card div {
+        width: 12px;
+        height: 12px;
+        background-color: var(--plum);
+        border-radius: 50%;
+        font-weight: bold;
+        font-size: var(--sm);
+        position: absolute;
+        top: -7px;
+        right: -2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      @media (max-width: 640px) {
+        .menu {
+          display: block;
+          margin-top: 16px;
+        }
+        .navbar-left ul {
+          display: none;
+        }
+        .navbar-email {
+          display: none;
+        }
+      }
+/*NAVBAR*/
+
+      .card-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 240px);
+        gap: 26px;
+        place-content: center;
+        margin-top: 10px;
+      }
+      .product-card {
+        width: 240px;
+      }
+      .product-img {
+        width: 240px;
+        height: 240px;
+        border-radius: 20px;
+        object-fit: cover;
+      }
+      .product-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 12px;
+      }
+      .product-info figure {
+        margin: 0;
+      }
+      .product-info figure img {
+        width: 35px;
+        height: 35px;
+      }
+      .product-info div p:nth-child(1) {
+        font-weight: bold;
+        font-size: var(--md);
+        margin: 0 0 4px 0;
+      }
+      .product-info div p:nth-child(2) {
+        font-size: var(--sm);
+        margin: 0;
+        color: var(--very-light-pink)
+      }
+      @media (max-width:640px) {
+        .card-container {
+         grid-template-columns: repeat(auto-fill, 140px);
+        }
+        .product-card {
+        width: 140px;
+      }
+      .product-img {
+        width: 140px;
+        height: 140px;
+      }
+      }
+
+    </style>
+    <body>
+    <nav>
+    <img
+      src="../src/images/menu.png"
+      alt="menu"
+      class="menu"
+    />
+
+    <div class="navbar-left">
+      <img
+        src="../src/images/logo.png"
+        alt="logo"
+        class="nav-logo"
+      />
+
+      <ul>
+        <li>
+          <a href="/">All</a>
+        </li>
+        <li>
+          <a href="/">Face</a>
+        </li>
+        <li>
+          <a href="/">Eyes</a>
+        </li>
+        <li>
+          <a href="/">Lips</a>
+        </li>
+        <li>
+          <a href="/">Brushes</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="navbar-right">
+      <ul>
+        <li class="navbar-email">
+          camilayokou@example.com
+          <img
+            src="../src/images/flecha-email.png"
+            alt="flechita"
+            class="flechita"
+          />
+        </li>
+        <li class="navbar-shopping-card">
+          <img
+            src="../src/images/shopping-car.png"
+            alt="shopping-card"
+            class="shopping-card"
+          />
+          <div>2</div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+      <section class="main-container">
+        <div class="card-container">
+
+          <div class="product-card">
+            <img class="product-img" src="https://cdn.shopify.com/s/files/1/0314/1143/7703/products/pdp-gallery-mini-lip-cheek-essentials-1440x1952.png?v=1650415791" alt="labial">
+            <div class="product-info">
+              <div>
+              <p>$18,00</p>
+              <p>Mini Lip & Cheek Essentials</p>
+              </div>
+            <figure>
+              <img src="../src/images/shopping-car1.svg" alt="carrito">
+            </figure>
+            </div>
+          </div>
+
+          <div class="product-card">
+          <img class="product-img" src="https://cdn.shopify.com/s/files/1/0314/1143/7703/products/4-IN-1-MIST-SKU-1_c9988cd0-b4d3-4fb7-b9e2-5e3a36bf5d05.jpg?v=1598637698" alt="4-en-1">
+          <div class="product-info">
+            <div>
+            <p>$24,00</p>
+            <p>Always An Optimist 4-In-1 Mist</p>
+          </div>
+          <figure>
+            <img src="../src/images/shopping-car1.svg" alt="carrito">
+          </figure>
+          </div>
+        </div>
+
+        <div class="product-card">
+        <img class="product-img" src="https://cdn.shopify.com/s/files/1/0314/1143/7703/products/Full-Size-Mascara-Open-SKU.jpg?v=1629247163" alt="mascara-de-pestañas">
+        <div class="product-info">
+        <div>
+          <p>$20,00</p>
+          <p>Perfect Strokes Universal Volumizing Mascara</p>
+        </div>
+        <figure>
+          <img src="../src/images/shopping-car1.svg" alt="carrito">
+        </figure>
+        </div>
+      </div>
+
+      <div class="product-card">
+      <img class="product-img" src="https://cdn.shopify.com/s/files/1/0314/1143/7703/products/FOUNDATION-BRUSH-SKU-1_b4e67510-3fda-4ca6-a72a-e7b955d788a8.jpg?v=1598638646" alt="brocha-liquida">
+      <div class="product-info">
+        <div>
+        <p>$28,00</p>
+        <p>Liquid Touch Foundation Brush</p>
+      </div>
+      <figure>
+        <img src="../src/images/shopping-car1.svg" alt="carrito">
+      </figure>
+      </div>
+      </div>
+
+         <div class="product-card">
+            <img class="product-img" src="https://cdn.shopify.com/s/files/1/0314/1143/7703/products/Compact-Mirror-Open-SKU.jpg?v=1608351844" alt="espejo-compacto">
+            <div class="product-info">
+              <div>
+              <p>$8,00</p>
+              <p>Compact Mirror</p>
+            </div>
+            <figure>
+              <img src="../src/images/shopping-car1.svg" alt="carrito">
+            </figure>
+            </div>
+          </div>
+
+          <div class="product-card">
+          <img class="product-img" src="https://cdn.shopify.com/s/files/1/0314/1143/7703/products/LIQUID_LINER-SKU-1.jpg?v=1630031335" alt="delineador-liquido">
+          <div class="product-info">
+            <div>
+            <p>$19,00</p>
+            <p>Perfect Strokes Matte Liquid Liner</p>
+          </div>
+          <figure>
+            <img src="../src/images/shopping-car1.svg" alt="carrito">
+          </figure>
+          </div>
+        </div>
+
+         <div class="product-card">
+        <img class="product-img" src="https://cdn.shopify.com/s/files/1/0314/1143/7703/products/Foundation-130N-SKU.jpg?v=1610501757" alt="base">
+        <div class="product-info">
+          <div>
+          <p>$29,00</p>
+          <p>Liquid Touch Weightless Foundation</p>
+         </div>
+         <figure>
+          <img src="../src/images/shopping-car1.svg" alt="carrito">
+          </figure>
+        </div>
+        </div>
+
+         <div class="product-card">
+            <img class="product-img" src="https://cdn.shopify.com/s/files/1/0314/1143/7703/products/Pore-Primer-SKU.jpg?v=1617149124" alt="primer">
+            <div class="product-info">
+              <div>
+              <p>$26,00</p>
+              <p>Always an Optimist Pore Diffusing Primer</p>
+            </div>
+            <figure>
+              <img src="../src/images/shopping-car1.svg" alt="carrito">
+            </figure>
+            </div>
+          </div>
+
+          <div class="product-card">
+          <img class="product-img" src="https://cdn.shopify.com/s/files/1/0314/1143/7703/products/Eyeshadow-Primer-SKU.jpg?v=1617149462" alt="primer-de-ojos">
+          <div class="product-info">
+            <div>
+            <p>$18,00</p>
+            <p>Always an Optimist Weightless Eye Primer</p>
+          </div>
+          <figure>
+            <img src="../src/images/shopping-car1.svg" alt="carrito">
+          </div>
+        </div>
+
+        <div class="product-card">
+            <img class="product-img" src="https://cdn.shopify.com/s/files/1/0314/1143/7703/products/Luminizer-ENCHANT-SKU.jpg?v=1598652680" alt="iluminador-rosa">
+            <div class="product-info">
+              <div>
+              <p>$22,00</p>
+              <p>Positive Light Liquid Luminizer</p>
+            </div>
+            <figure>
+              <img src="../src/images/shopping-car1.svg" alt="carrito">
+            </figure>
+            </div>
+          </div>
+
+          <div class="product-card">
+          <img class="product-img" src="https://cdn.shopify.com/s/files/1/0314/1143/7703/products/Liquid-Blush-Matte-BLISS-SKU.jpg?v=1639020840" alt="blush">
+          <div class="product-info">
+            <div>
+            <p>$20,00</p>
+            <p>Soft Pinch Liquid Blush</p>
+          </div>
+          <figure>
+            <img src="../src/images/shopping-car1.svg" alt="carrito">
+          </figure>
+          </div>
+        </div>
+
+        <div class="product-card">
+            <img class="product-img" src="https://cdn.shopify.com/s/files/1/0314/1143/7703/products/Setting-Powder-Light-Medium-SKU.jpg?v=1639181034" alt="polvo-compacto">
+            <div class="product-info">
+              <div>
+              <p>$22,00</p>
+              <p>Always an Optimist Soft Radiance Setting Powder</p>
+            </div>
+            <figure>
+              <img src="../src/images/shopping-car1.svg" alt="carrito">
+            </figure>
+            </div>
+          </div>
+
+          <div class="product-card">
+          <img class="product-img" src="https://cdn.shopify.com/s/files/1/0314/1143/7703/products/Brow-Harmony-Palette-Soft-Blonde-SKU.jpg?v=1630021431" alt="duo-cejas">
+          <div class="product-info">
+            <div>
+            <p>$24,00</p>
+            <p>Brow Harmony Shape & Fill Duo</p>
+          </div>
+          <figure>
+            <img src="../src/images/shopping-car1.svg" alt="carrito">
+          </figure>
+          </div>
+        </div>
+
+        <div class="product-card">
+        <img class="product-img" src="https://cdn.shopify.com/s/files/1/0314/1143/7703/products/Came-to-Play-SKU.jpg?v=1634319954" alt="paleta-sombras-1">
+        <div class="product-info">
+          <div>
+          <p>$29,00</p>
+          <p>Rare Beauty Discovery Eyeshadow Palette – Came To Play</p>
+        </div>
+        <figure>
+          <img src="../src/images/shopping-car1.svg" alt="carrito">
+        </figure>
+        </div>
+        </div>
+
+         <div class="product-card">
+            <img class="product-img" src="https://cdn.shopify.com/s/files/1/0314/1143/7703/products/True-to-Myself-SKU.jpg?v=1617143677" alt="paleta-sombras-2">
+            <div class="product-info">
+              <div>
+              <p>$29,00</p>
+              <p>Rare Beauty Discovery Eyeshadow Palette</p>
+            </div>
+            <figure>
+              <img src="../src/images/shopping-car1.svg" alt="carrito">
+            </figure>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </body>
+</html>

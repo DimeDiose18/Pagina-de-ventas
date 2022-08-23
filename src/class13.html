@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --white: #ffffff;
+        --black: #000000;
+        --very-light-pink: #d8bfd8;
+        --text-input-field: #f7f7f7;
+        --plum: LightPink;
+        --turqueise: #76d7c4;
+        --sm: 14px;
+        --md: 16px;
+        --lg: 18px;
+      }
+      body {
+        margin: 0;
+        font-family: 'Quicksand', sans-serif;
+        background-color: rgba(221, 160, 221, 0.1);
+      }
+      .product-detail {
+        width: 360px;
+        padding: 24px;
+        position: absolute;
+        right: 0;
+        box-sizing: border-box;
+      }
+      .title-container {
+        display: flex;
+        align-items: center;
+      }
+      .title-container img {
+        transform: rotate(180deg);
+        width: 15px;
+        height: 10px;
+      }
+      .title {
+        font-size: var(--lg);
+        font-weight: bold;
+      }
+      .order {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 16px;
+        align-items: center;
+        background-color: var(--very-light-pink);
+        margin-bottom: 24px;
+        border-radius: 8px;
+        padding: 0 24px;
+      }
+      .order p:nth-child(1) {
+        display: flex;
+        flex-direction: column;
+      }
+      .order p span:nth-child(1) {
+        font-size: var(--md);
+        font-weight: bold;
+      }
+      .order p span:nth-child(2) {
+        font-size: var(--sm);
+        color: var(--text-input-field);
+      }
+      .order p:nth-child(2) {
+        text-align: end;
+        font-weight: bold;
+      }
+      .shopping-cart {
+        display: grid;
+        grid-template-columns: auto 1fr auto auto;
+        gap: 16px;
+        margin-bottom: 24px;
+        align-items: center;
+      }
+      .shopping-cart figure {
+        margin: 0;
+      }
+      .shopping-cart figure img {
+        width: 80px;
+        height: 80px;
+        border-radius: 20px;
+        object-fit: cover;
+      }
+      .shopping-cart p:nth-child(2) {
+        color: var(--very-light-pink);
+      }
+      .shopping-cart p:nth-child(3) {
+        font-size: var(--md);
+        font-weight: bold;
+      }
+      .icon-close {
+        width: 10px;
+      }
+      .icon-close:hover {
+        cursor: pointer;
+      }
+      .primary-button {
+        background-color: var(--plum);
+        border-radius: 8px;
+        border: none;
+        color: var(--white);
+        height: 40px;
+        width: 100%;
+        cursor: pointer;
+        font-size: var(--sm);
+        font-weight: bold;
+      }
+      @media (max-width: 640px) {
+        .product-detail {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <aside class="product-detail">
+      <div class="title-container">
+        <img src="../src/images/flecha-email.png" alt="arrow">
+        <p class="title">Shopping cart</p>
+      </div>
+      <div class="my-order-content>">
+        <div class="shopping-cart">
+          <figure>
+            <img
+              src="https://cdn.shopify.com/s/files/1/0314/1143/7703/products/pdp-gallery-mini-lip-cheek-essentials-1440x1952.png?v=1650415791"
+              alt="labial"
+            />
+          </figure>
+          <p>Mini Lip & Cheek</p>
+          <p>$18.000</p>
+          <img
+            class="icon-close"
+            src="../src/images/icon-close.png"
+            alt="icon-close"
+          />
+        </div>
+
+        <div class="shopping-cart">
+          <figure>
+            <img
+              src="https://cdn.shopify.com/s/files/1/0314/1143/7703/products/Full-Size-Mascara-Open-SKU.jpg?v=1629247163"
+              alt="mascara-de-pestañas"
+            />
+          </figure>
+          <p>Volumizing Mascara</p>
+          <p>$20.000</p>
+          <img
+            class="icon-close"
+            src="../src/images/icon-close.png"
+            alt="icon-close"
+          />
+        </div>
+
+        <div class="shopping-cart">
+          <figure>
+            <img
+              src="https://cdn.shopify.com/s/files/1/0314/1143/7703/products/LIQUID_LINER-SKU-1.jpg?v=1630031335"
+              alt="delineador-liquido"
+            />
+          </figure>
+          <p>Matte Liquid Liner</p>
+          <p>$19.000</p>
+          <img
+            class="icon-close"
+            src="../src/images/icon-close.png"
+            alt="icon-close"
+          />
+        </div>
+
+        <div class="shopping-cart">
+          <figure>
+            <img
+              src="https://cdn.shopify.com/s/files/1/0314/1143/7703/products/Foundation-130N-SKU.jpg?v=1610501757"
+              alt="base"
+            />
+          </figure>
+          <p>Liquid Foundation</p>
+          <p>$29.000</p>
+          <img
+            class="icon-close"
+            src="../src/images/icon-close.png"
+            alt="icon-close"
+          />
+        </div>
+
+        <div class="shopping-cart">
+          <figure>
+            <img
+              src="https://cdn.shopify.com/s/files/1/0314/1143/7703/products/Luminizer-ENCHANT-SKU.jpg?v=1598652680"
+              alt="iluminador-rosa"
+            />
+          </figure>
+          <p>Liquid Luminizer</p>
+          <p>$22.000</p>
+          <img
+            class="icon-close"
+            src="../src/images/icon-close.png"
+            alt="icon-close"
+          />
+        </div>
+
+        <div class="shopping-cart">
+          <figure>
+            <img
+              src="https://cdn.shopify.com/s/files/1/0314/1143/7703/products/Eyeshadow-Primer-SKU.jpg?v=1617149462"
+              alt="primer-de-ojos"
+            />
+          </figure>
+          <p>Eye Primer</p>
+          <p>$18.000</p>
+          <img
+            class="icon-close"
+            src="../src/images/icon-close.png"
+            alt="icon-close"
+          />
+        </div>
+
+        <div class="shopping-cart">
+          <figure>
+            <img
+              src="https://cdn.shopify.com/s/files/1/0314/1143/7703/products/True-to-Myself-SKU.jpg?v=1617143677"
+              alt="paleta-sombras-2"
+            />
+          </figure>
+          <p>Eyeshadow Palette</p>
+          <p>$29.000</p>
+          <img
+            class="icon-close"
+            src="../src/images/icon-close.png"
+            alt="icon-close"
+          />
+        </div>
+
+        <div class="order">
+          <p>
+            <span>Total</span>
+          </p>
+          <p>$155.000</p>
+        </div>
+        <button class="primary-button add-to-cart-button">Checkout</button>
+      </div>
+    </aside>
+  </body>
+</html>
