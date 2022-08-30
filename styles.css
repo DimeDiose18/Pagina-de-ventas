@@ -140,9 +140,8 @@ nav {
 
 /*Menu en Mobile*/
 .mobile-menu {
-  padding: 24px;
   position: absolute;
-  top: 50px;
+  top: 45px;
 }
 .mobile-menu a {
   text-decoration: none;
@@ -173,12 +172,15 @@ nav {
 @media (max-width: 640px) {
   .menu {
     display: block;
-    margin-top: 16px;
+    margin-top: 15px;
   }
-  .navbar-left ul {
+  .navbar-left ul, .navbar-email, .desktop-menu {
     display: none;
   }
-  .navbar-email {
-    display: none;
-  }
+  
+}
+@media (min-width: 641px) {
+.mobile-menu {
+  display: none;
+}
 }
