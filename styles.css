@@ -13,7 +13,7 @@
 body {
   margin: 0;
   font-family: "Quicksand", sans-serif;
-  background-color: rgba(221, 160, 221, 0.1);
+  background-color: var(--white);
 }
 .inactive {
 	display: none;
@@ -140,8 +140,9 @@ nav {
 
 /*Menu en Mobile*/
 .mobile-menu {
+  background-color: var(--white);
   position: absolute;
-  top: 45px;
+  top: 51px;
 }
 .mobile-menu a {
   text-decoration: none;
@@ -168,6 +169,95 @@ nav {
   font-size: var(--sm);
 }
 
+/*Carrito de compras (aside de product detail)*/
+.product-detail {
+  background-color: var(--white);
+  width: 360px;
+  padding: 0 15px;
+  position: absolute;
+  right: 0;
+  box-sizing: border-box;
+}
+.title-container {
+  display: flex;
+  align-items: center;
+}
+.title-container img {
+  transform: rotate(180deg);
+  width: 15px;
+  height: 10px;
+}
+.title {
+  font-size: var(--lg);
+  font-weight: bold;
+}
+.order {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  align-items: center;
+  background-color: var(--very-light-pink);
+  margin-bottom: 24px;
+  border-radius: 8px;
+  padding: 0 24px;
+}
+.order p:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+}
+.order p span:nth-child(1) {
+  font-size: var(--md);
+  font-weight: bold;
+}
+.order p span:nth-child(2) {
+  font-size: var(--sm);
+  color: var(--text-input-field);
+}
+.order p:nth-child(2) {
+  text-align: end;
+  font-weight: bold;
+}
+.shopping-cart {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  gap: 16px;
+  margin-bottom: 24px;
+  align-items: center;
+}
+.shopping-cart figure {
+  margin: 0;
+}
+.shopping-cart figure img {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+.shopping-cart p:nth-child(2) {
+  color: var(--very-light-pink);
+}
+.shopping-cart p:nth-child(3) {
+  font-size: var(--md);
+  font-weight: bold;
+}
+.icon-close {
+  width: 10px;
+}
+.icon-close:hover {
+  cursor: pointer;
+}
+.primary-button {
+  background-color: var(--plum);
+  border-radius: 8px;
+  border: none;
+  color: var(--white);
+  height: 40px;
+  width: 100%;
+  cursor: pointer;
+  font-size: var(--sm);
+  font-weight: bold;
+}
+
 /*Media Query*/
 @media (max-width: 640px) {
   .menu {
@@ -177,7 +267,9 @@ nav {
   .navbar-left ul, .navbar-email, .desktop-menu {
     display: none;
   }
-  
+  .product-detail {
+    width: 100%;
+  }
 }
 @media (min-width: 641px) {
 .mobile-menu {
