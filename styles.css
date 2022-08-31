@@ -173,7 +173,7 @@ nav {
 .product-detail {
   background-color: var(--white);
   width: 360px;
-  padding: 0 15px;
+  padding: 0 15px 15px;
   position: absolute;
   right: 0;
   box-sizing: border-box;
