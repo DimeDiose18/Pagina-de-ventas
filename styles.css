@@ -144,6 +144,8 @@ nav {
   background-color: var(--white);
   position: absolute;
   top: 51px;
+  left: 0;
+  width: 100%;
   box-shadow: 2px 2px 2px 1px var(--very-light-pink);
   padding: 5px;
 }
@@ -176,15 +178,18 @@ nav {
  aside {
   background-color: var(--white);
   width: 360px;
-  padding: 0 15px 15px;
   position: absolute;
   right: 0;
   box-sizing: border-box;
-  padding: 5px;
   box-shadow: 0px 5px 5px 0px var(--very-light-pink);
+  padding-bottom: 5px;
 }
 
 /*Shopping Cart*/
+
+#shoppingCartContainer {
+  padding: 0 24px 5px 24px;
+}
 
 .title-container {
   display: flex;
@@ -408,7 +413,7 @@ nav {
   .navbar-left ul, .navbar-email, .desktop-menu {
     display: none;
   }
-  .product-detail {
+  .product-detail, #shoppingCartContainer {
     width: 100%;
   }
 .card-container {
@@ -421,6 +426,7 @@ nav {
   width: 140px;
   height: 140px;
 }
+
 }
 
 @media (min-width: 641px) {
